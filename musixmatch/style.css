@@ -1,0 +1,173 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#musixmatch {
+    fill: white;
+}
+
+.nav-container, .hder-container, .main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-container ul {
+    font-size: 15px;
+    font-weight: 600;
+    padding: 20px 20px;
+    display: flex;
+    list-style: none;
+}
+
+.nav-btn {
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+.pro::after {
+    position: relative;
+    bottom: 5%;
+    left: 4%;
+    content: "PRO";
+    background-color: #ff5353;
+    font-size: 8px;
+    padding: 2px 5px;
+    border-radius: 4px;
+}
+
+.nav-btn:hover {
+    color: #f63;
+}
+
+.cta {
+    color: black;
+    text-decoration: none;
+    padding: 10px 16px;
+    background-color: white;
+    border-radius: 20px;
+    transition: background-color 0.5s;
+}
+
+.cta:hover {
+    background-color: #2c3e50;
+}
+
+.hder-container h1 {
+    padding-top: 120px;
+    font-size: 70px
+}
+
+.sections-container {
+    padding: 50px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+    display: block;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 0.5fr 1fr;
+    max-width: 90%;
+}
+
+.card-main h3 {
+    font-size: 18px;
+    color: #ff5353;
+    margin-bottom: 10px;
+}
+
+.card-main p {
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+.card-img img {
+    max-width: 60%;
+}
+
+
+.main-section {
+    padding: 120px 0px 120px 80px;
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(68,68,68,1) 75%);
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: 0.8fr 1fr;
+}
+
+.cta-sec a {
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+    border-radius: 15px;
+    padding: 20px 40px;
+    background-color: #ff5353;
+}
+
+.main-subtitle h2 {
+    font-size: 55px;
+    font-weight: 600;
+    margin: 10px 0px 40px 0px;
+}
+
+.main-logo img {
+    max-width: 60%;
+}
+
+.product-cards {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-img {
+    text-align: center;
+}
+
+.product-img img {
+    max-width: 80%;
+}
+
+.product-card {
+    padding: 20px 10px 15px 10px;
+    margin: 100px auto;
+    border-radius: 15px;
+}
+
+.product-logo img {
+    max-width: 50%;
+}
+
+.spotify {
+    background-color: #2ce26d;
+}
+
+.instagram {
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(251,29,253,1) 80%, rgba(198,52,130,1) 96%);
+}
+
+.applemusic {
+
+    background: linear-gradient(90deg, rgba(233,98,124,1) 0%, rgba(177,80,216,1) 87%);
+}
+
+.vevo {
+    background: linear-gradient(90deg, rgba(123,123,123,1) 0%, rgba(68,68,68,1) 73%);
+}
