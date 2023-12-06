@@ -1,6 +1,7 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -14,7 +15,7 @@ body {
 }
 
 .nav-container, .hder-container, .main-container {
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
 }
 
@@ -83,13 +84,13 @@ body {
 .group-card {
     display: block;
     color: white;
+    display: flex;
+    justify-content: space-between;
     text-decoration: none;
     cursor: pointer;
-    display: grid;
     align-items: center;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    max-width: 90%;
+    max-width: 100%;
+
 }
 
 
@@ -105,9 +106,14 @@ body {
     font-weight: lighter;
 }
 
+.card-img {
+    text-align: center;
+}
+
 
 .card-img img {
     max-width: 60%;
+    height: 60px;
 }
 
 .card-arrow {
@@ -115,12 +121,23 @@ body {
 }
 
 .main-section {
-    padding: 120px 0px 120px 80px;
     background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(68,68,68,1) 75%);
     border-radius: 15px;
     display: grid;
-    grid-template-columns: 0.8fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
+    padding: 20px 0px;
+}
+
+.main-container-left {
+    padding: 50px 0px 120px 80px;
+}
+
+.main-container-right {
+    background-image: url(img/banner-2.png);
+    background-size:contain;
+    background-repeat: no-repeat;
+    padding: 50px 0px 50px 0px;
 }
 
 .cta-sec a {
@@ -135,6 +152,7 @@ body {
 .main-subtitle h2 {
     font-size: 55px;
     font-weight: 600;
+    max-width: 430px;
     margin: 10px 0px 40px 0px;
 }
 
@@ -217,19 +235,27 @@ body {
 }
 
 .main-desc p {
-    font-size: 20px;
-
+    font-size: 23px;
     margin-bottom: 40px;
 }
 
 .brand-container {
     align-items: center;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-flow: wrap;
 }
 
-.brand-container img {
-    margin: 0px 10px;
-    max-width: 15%;
+.brand-logo {
+
+    margin: 10px 20px;
+    text-align: center;
+    
+}
+
+.brand-logo img {
+    max-width: 100%;
+    height: 60px;
 }
 
 .slogan-title {
@@ -237,14 +263,77 @@ body {
 }
 
 .slogan-title h3 {
+    font-weight: 600;
+    font-size: 40px;
+}
+
+.app-access-card {
+    border-radius: 15px;
+    background-color: #1d1d1d;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+
+    margin-bottom: 50px;
+}
+
+.app-access-content {
+    padding: 100px 50px;
+}
+
+.app-access-content h3 {
+    margin: 0;
     font-weight: 800;
     font-size: 30px;
 }
 
-.shazam {
-    max-width: 20%;
+.app-access-content p {
+    margin: 30px 0px 50px 0px;
+    font-size: 20px;
 }
 
+.app-access-button {
+    text-decoration: none;
+    color: white;
+    background-color: #101519;
+    border-radius: 10px;
+    font-weight: 600;
+    padding: 18px 30px;
+}
+
+.app {
+    background-image: url(img/community-card.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.curator {
+    background-image: url(img/curator-card.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.catalog {
+    background-image: url(img/artist-card.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.learn-more {
+    background-image: url(img/ai-card.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.partner-bg {
+    background-image: url(img/publisher-card.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
 
 @media (max-width: 768px) {
 
@@ -283,12 +372,11 @@ body {
         border-radius: 15px;
         padding: 10px 15px;
         background-color: #ffeded;
+        display: grid;
         grid-template-columns: 10% 80% 10%;
         grid-template-rows: 1fr;
         max-width: 100%;
     }
-
-
 
     .card-container {
         max-width: 100%;
@@ -306,6 +394,7 @@ body {
 
     .card-img img {
         max-width: 70%;
+        height: 70%;
     }
 
 
@@ -361,13 +450,15 @@ body {
         border-radius: 25px;
     }
 
+    .main-container-left {
+        padding: 0;
+    }
+
     .main-container-right {
-        background-image: url(img/banner.png);
-        background-repeat: no-repeat;
-        background-size:100%;
+        background-position: center;
         max-width: 100%;
-        margin-top: 50px;
-        padding: 60% 0%;
+        margin-top: 30px;
+        padding: 40% 0%;
     }
 
     .carousel {
@@ -404,4 +495,35 @@ body {
     .main-logo img {
         max-width: 55%;
     }
+
+    .brand-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    .brand-container img {
+        max-width: 100%;
+        height: 5%;
+    }
+
+    .brand-logo {
+        margin: 0;
+        max-width: 200px;
+    }
+
+    .app-access-card {
+        display: flex;
+        flex-direction: column-reverse;
+
+    }
+    
+    .app-access-content {
+        padding: 20px 10px 30px 10px;
+    }
+
+    .app-access-button {
+        border-radius: 30px;
+    }
+
 }
