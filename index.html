@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+
     <title>Musixmatch</title>
 </head>
 <body>
@@ -62,11 +65,11 @@
             <div class="sections-container">
                 <section>
                     <div class="card-container">
-                        <a href="" target="_blank" class="card">
-                            <div class="card-img">
+                        <a href="" target="_blank" class="group-card">
+                            <div class="card-img partner">
                                 <img src="img/partners.png" alt="">
                             </div>
-                            <div class="card-main">
+                            <div class="card-info">
                                 <div class="card-title">
                                     <h3>For Partners</h3>
                                 </div>
@@ -74,16 +77,19 @@
                                     <p>All you need to take your service to the next level.</p>
                                 </div>
                             </div>
+                            <div class="card-arrow">
+                                <img src="img/arrow.png" alt="">
+                            </div>
                         </a>
                     </div>
                 </section>
                 <section>
                     <div class="card-container">
-                        <a href="" target="_blank" class="card">
-                            <div class="card-img">
+                        <a href="" target="_blank" class="group-card">
+                            <div class="card-img artist">
                                 <img src="img/artists.png" alt="">
                             </div>
-                            <div class="card-main">
+                            <div class="card-info">
                                 <div class="card-title">
                                     <h3>For Artists</h3>
                                 </div>
@@ -91,33 +97,39 @@
                                     <p>Get full control of your music catalog and profile.</p>
                                 </div>
                             </div>
+                            <div class="card-arrow">
+                                <img src="img/arrow.png" alt="">
+                            </div>
                         </a>
                     </div>
                 </section>
                 <section>
                     <div class="card-container">
-                        <a href="" target="_blank" class="card">
-                            <div class="card-img">
+                        <a href="" target="_blank" class="group-card">
+                            <div class="card-img publisher">
                                 <img src="img/publishers.png" alt="">
                             </div>
-                            <div class="card-main">
+                            <div class="card-info">
                                 <div class="card-title">
                                     <h3>For Publishers</h3>
                                 </div>
                                 <div class="card-desc">
                                     <p>Distribute your lyrics globally and get paid royalties.</p>
                                 </div>
-                            </div>    
+                            </div>  
+                            <div class="card-arrow">
+                                <img src="img/arrow.png" alt="">
+                            </div>  
                         </a>
                     </div>
                 </section>
                 <section>
                     <div class="card-container">
-                        <a href="" target="_blank" class="card">
-                            <div class="card-img">
+                        <a href="" target="_blank" class="group-card">
+                            <div class="card-img podcast">
                                 <img src="img/podcasters.png" alt="">
                             </div>
-                            <div class="card-main">
+                            <div class="card-info">
                                 <div class="card-title">
                                     <h3>For Podcasters</h3>
                                 </div>
@@ -125,6 +137,9 @@
                                     <p>Transcribe your podcasts and get found.</p>
                                 </div>
                             </div>    
+                            <div class="card-arrow">
+                                <img src="img/arrow.png" alt="">
+                            </div>
                         </a>
                     </div>
                 </section>
@@ -146,66 +161,138 @@
                         <a href="">Join Musixmatch Pro</a>
                     </div>
                 </div>
-                <div class="main-container-right">
-    
-                </div>
+                <div class="main-container-right"></div>
             </div>
+
+            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="product-card spotify">
+                        <div class="card-bg"></div>
+                        <div class="product-main">
+                            <div class="product-logo">
+                                    <img src="img/spotify.png" alt="">
+                            </div>
+                            <div class="product-desc">
+                                <p>
+                                    Real-time synced lyrics enhance users listening experience and song engagement.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="product-card instagram">
+                        <div class="card-bg"></div>
+                        <div class="product-main">
+                            <div class="product-logo">
+                                <img src="img/instagram.png" alt="">
+                            </div>
+                            <div class="product-desc">
+                                <p>
+                                    Lyrics can be added directly to Instagram Stories for enriched storytelling.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="product-card applemusic">
+                        <div class="card-bg"></div>
+                        <div class="product-main">
+                            <div class="product-logo">
+                                <img src="img/applemusic.png" alt="">
+                            </div>
+                            <div class="product-desc">
+                                <p>
+                                    Lyrics search option and display allow for easy song discovery and a heightened experience.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="product-card vevo">
+                        <div class="card-bg"></div>
+                        <div class="product-main">
+                            <div class="product-logo">
+                                <img src="img/vevo.png" alt="">
+                            </div>
+                            <div class="product-desc">
+                                <p>
+                                    Emotion-based ads targeting thanks to AI-powered song moods.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
             <div class="product-cards">
                 <div class="product-card spotify">
-                    <div class="product-img">
-                        <img src="img/spotify_screen.png" alt="">
-                    </div>
+                    <div class="card-bg"></div>
                     <div class="product-main">
                         <div class="product-logo">
-                            <img src="img/spotify.png" alt="">
+                                <img src="img/spotify.png" alt="">
                         </div>
                         <div class="product-desc">
-                            Real-time synced lyrics enhance users’ listening experience and song engagement.
+                            <p>
+                                Real-time synced lyrics enhance users listening experience and song engagement.
+                            </p>
                         </div>
                     </div>
                 </div>
+
     
     
                 <div class="product-card instagram">
-                    <div class="product-img">
-                        <img src="img/instagram_screen.png" alt="">
-                    </div>
+                    <div class="card-bg"></div>
                     <div class="product-main">
                         <div class="product-logo">
                             <img src="img/instagram.png" alt="">
                         </div>
                         <div class="product-desc">
-                            Lyrics can be added directly to Instagram Stories for enriched storytelling.
+                            <p>
+                                Lyrics can be added directly to Instagram Stories for enriched storytelling.
+                            </p>
                         </div>
                     </div>
                 </div>
     
     
                 <div class="product-card applemusic">
-                    <div class="product-img">
-                        <img src="img/apple_screen.png" alt="">
-                    </div>
+                    <div class="card-bg"></div>
                     <div class="product-main">
                         <div class="product-logo">
                             <img src="img/applemusic.png" alt="">
                         </div>
                         <div class="product-desc">
-                            Lyrics search option and display allow for easy song discovery and a heightened experience.
+                            <p>
+                                Lyrics search option and display allow for easy song discovery and a heightened experience.
+                            </p>
                         </div>
                     </div>
                 </div>
-    
-    
+                
                 <div class="product-card vevo">
-                    <div class="product-img">
-                        <img src="img/vevo_screen.png" alt="">
-                    </div>
+                    <div class="card-bg"></div>
                     <div class="product-main">
                         <div class="product-logo">
                             <img src="img/vevo.png" alt="">
                         </div>
                         <div class="product-desc">
-                            Emotion-based ads targeting thanks to AI-powered song moods.
+                            <p>
+                                Emotion-based ads targeting thanks to AI-powered song moods.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -213,5 +300,6 @@
         </div>
 
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>

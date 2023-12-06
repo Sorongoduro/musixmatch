@@ -74,36 +74,43 @@ body {
 
 .sections-container {
     padding: 50px 0px;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
 }
 
-.card {
+.group-card {
     display: block;
     color: white;
     text-decoration: none;
     cursor: pointer;
     display: grid;
     align-items: center;
-    grid-template-columns: 0.5fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
     max-width: 90%;
 }
 
-.card-main h3 {
+
+.card-info h3 {
     font-size: 18px;
     color: #ff5353;
     margin-bottom: 10px;
 }
 
-.card-main p {
+.card-info p {
     font-size: 15px;
     font-weight: lighter;
 }
+
 
 .card-img img {
     max-width: 60%;
 }
 
+.card-arrow {
+    display: none;
+}
 
 .main-section {
     padding: 120px 0px 120px 80px;
@@ -111,6 +118,7 @@ body {
     border-radius: 15px;
     display: grid;
     grid-template-columns: 0.8fr 1fr;
+    grid-template-rows: 1fr;
 }
 
 .cta-sec a {
@@ -132,23 +140,31 @@ body {
     max-width: 60%;
 }
 
+.carousel {
+    display: none;
+}
+
 .product-cards {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: stretch;
 }
 
 .product-img {
+    position: relative;
     text-align: center;
-}
-
-.product-img img {
-    max-width: 80%;
+    overflow: hidden;
 }
 
 .product-card {
-    padding: 20px 10px 15px 10px;
-    margin: 100px auto;
     border-radius: 15px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.5fr 0.5fr;
+    padding: 15px 10px 15px 10px;
+    margin: 100px 20px;
+    max-width: 100%;
 }
 
 .product-logo img {
@@ -156,49 +172,190 @@ body {
 }
 
 .spotify {
-    background-color: #2ce26d;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    background-image: url(img/spotify-bg.png);
 }
 
 .instagram {
-    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(251,29,253,1) 80%, rgba(198,52,130,1) 96%);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    background-image: url(img/instagram-bg.png);
 }
 
 .applemusic {
-
-    background: linear-gradient(90deg, rgba(233,98,124,1) 0%, rgba(177,80,216,1) 87%);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    background-image: url(img/apple-bg.png);
+   
 }
 
 .vevo {
-    background: linear-gradient(90deg, rgba(123,123,123,1) 0%, rgba(68,68,68,1) 73%);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    background-image: url(img/vevo-bg.png);
 }
 
 @media (max-width: 768px) {
-    .sections-container {
-        display: block;
+
+    .nav-container, .hder-container, .main-container {
+        max-width: 85%;
+        margin: 0 auto;
     }
-    .product-cards {
-        display: block;
+
+    nav {
+        background-color: rgb(26, 26, 26);
     }
+
     .nav-container-left {
-        margin-left: 20px;
+        margin: 0;
+        padding: 10px 0px 5px 0px;
     }
+
     .nav-container-right {
-        opacity: 0;
+        background-color: rgb(26, 26, 26);
     }
+
+
+    .nav-container-right ul {
+        display: none;
+    }
+
     .hder-container h1 {
-        font-size: 30px;
+        padding-top: 50px;
+        font-size: 40px;
+        font-weight: 600;
         width: 100%;
-        margin-left: 20px;
+        
     }
+
+    .group-card {
+        border-radius: 15px;
+        padding: 10px 15px;
+        background-color: #ffeded;
+        grid-template-columns: 10% 80% 10%;
+        grid-template-rows: 1fr;
+        max-width: 100%;
+    }
+
+
+
+    .card-container {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .card-title h3 {
+        margin: 0;
+    }
+
+    .card-img {
+        
+        text-align: left;
+    }
+
+    .card-img img {
+        max-width: 70%;
+    }
+
+
+    .partner img {
+        content: url(img/partner.png);
+    }
+
+    .artist img {
+        content: url(img/artist.png);
+    }
+
+    .publisher img {
+        content: url(img/publisher.png);
+    }
+
+    .podcast img {
+        content: url(img/podcast.png);
+    }
+
+    .card-desc {
+        display: none;
+    }
+
+    .card-title {
+        margin: 0;
+    }
+    
+    .card-title h3 {
+        font-weight: 600;
+    }
+
+    .card-arrow {
+        text-align: end;
+        align-items: center;
+        display: inline-block;
+    }
+
+    .card-arrow img {
+        max-width: 50%;
+    }
+
+    .sections-container {
+
+        display: block;
+        margin: 0 auto;
+    }
+    
     .main-section {
-        width: 100%;
-        padding: 20px 10px 20px 10px;
+        display: flex;
+        flex-direction: column;
+        padding: 40px 25px 20px 25px;
+        text-align: center;
+        border-radius: 25px;
     }
+
+    .main-container-right {
+        background-image: url(img/banner.png);
+        background-repeat: no-repeat;
+        background-size:100%;
+        max-width: 100%;
+        margin-top: 50px;
+        padding: 60% 0%;
+    }
+
+    .carousel {
+        display: block;
+    }
+
+    .product-cards {
+        display: none;
+    }
+
+    .product-card {
+        padding: 0px 20px;
+        height: 500px;
+    }
+
+    .product-desc {
+        margin-top: 10px;
+    }
+
+    .product-logo img {
+        max-width: 30%;
+    }
+
     .main-subtitle h2 {
-        font-size: 25px;
+        font-size: 30px;
+        margin: 20px 0px 25px 0px;
     }
     .cta-sec a {
-        padding: 10px;
-        font-size: 10px;
+        border-radius: 20px;
+        padding: 12px 25px;
+        font-size: 15px;
+    }
+
+    .main-logo img {
+        max-width: 55%;
     }
 }
