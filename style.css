@@ -458,7 +458,7 @@ body {
     .main-section {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 2fr;
-        padding: 40px 0px 20px 0px;
+        padding: 40px 0px 0px 0px;
         text-align: center;
         border-radius: 25px;
     }
@@ -472,15 +472,15 @@ body {
     .main-container-left {
         display: flex;
         flex-direction: column;
-        padding: 20px 10px;
+        padding: 30px 10px;
     }
 
     .main-container-right {
         background-image: url(img/banner.png);
-        background-size: cover;
+        background-size: contain;
         background-position: center;
         max-width: 100%;
-
+        padding: 0;
     }
 
     .carousel {
@@ -559,6 +559,18 @@ body {
 
     .app-access-button {
         border-radius: 30px;
+    }
+
+}
+
+@media (max-width: 375px) {
+    
+    .main-container-left {
+
+    }
+
+    .main-container-right {
+        background-size: cover;
     }
 
 }
