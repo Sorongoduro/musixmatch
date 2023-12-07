@@ -258,6 +258,10 @@ body {
     height: 60px;
 }
 
+.inline-parent {
+    display: none;
+}
+
 .slogan-title {
     margin: 80px 0px;
 }
@@ -337,11 +341,6 @@ body {
 
 @media (max-width: 768px) {
 
-    .nav-container, .hder-container, .main-container {
-        max-width: 85%;
-        margin: 0 auto;
-    }
-
     nav {
         background-color: rgb(26, 26, 26);
     }
@@ -356,13 +355,26 @@ body {
     }
 
 
+    .sections-container {
+        padding: 30px 0px;
+    }
+
     .nav-container-right ul {
         display: none;
     }
 
+    .nav-container, .hder-container, .main-section, .main-slogan, .community-secs {
+        margin: 0px 25px;
+    }
+
+    .button-container {
+        margin-left: 25px;
+        text-align: start;
+    }
+
     .hder-container h1 {
         padding-top: 50px;
-        font-size: 40px;
+        font-size: 30px;
         font-weight: 600;
         width: 100%;
         
@@ -444,22 +456,31 @@ body {
     }
     
     .main-section {
-        display: flex;
-        flex-direction: column;
-        padding: 40px 25px 20px 25px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr;
+        padding: 40px 0px 20px 0px;
         text-align: center;
         border-radius: 25px;
     }
 
+    .main-subtitle h2 {
+        font-size: 30px;
+        margin: 0;
+    }
+
+
     .main-container-left {
-        padding: 0;
+        display: flex;
+        flex-direction: column;
+        padding: 20px 10px;
     }
 
     .main-container-right {
+        background-image: url(img/banner.png);
+        background-size: cover;
         background-position: center;
         max-width: 100%;
-        margin-top: 30px;
-        padding: 40% 0%;
+
     }
 
     .carousel {
@@ -471,7 +492,7 @@ body {
     }
 
     .product-card {
-        padding: 0px 20px;
+        padding: 0px 25px;
         height: 500px;
     }
 
@@ -483,14 +504,19 @@ body {
         max-width: 30%;
     }
 
-    .main-subtitle h2 {
-        font-size: 30px;
-        margin: 20px 0px 25px 0px;
+
+    .cta-sec {
+        margin-top: 30px;
     }
+
     .cta-sec a {
         border-radius: 20px;
         padding: 12px 25px;
         font-size: 15px;
+    }
+
+    .main-logo {
+        margin-bottom: 20px;
     }
 
     .main-logo img {
@@ -498,19 +524,27 @@ body {
     }
 
     .brand-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+        max-width: 100%;
+        display: flex;
+        align-items: flex-start;
+        flex-flow: wrap;
     }
 
-    .brand-container img {
-        max-width: 100%;
-        height: 45px;
+    .slogan-title {
+        margin: 50px 0px 25px 20px;
+    }
+
+    .slogan-title h3 {
+        max-width: 70%;
+        font-size: 35px;
     }
 
     .brand-logo {
-        margin: 0;
-        max-width: 200px;
+        max-width: 35%;
+    }
+
+    .brand-logo img {
+        max-width: 100%;
     }
 
     .app-access-card {
