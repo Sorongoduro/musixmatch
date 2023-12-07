@@ -531,12 +531,12 @@ body {
     }
 
     .slogan-title {
-        margin: 50px 0px 25px 20px;
+        margin: 50px 20px 25px 20px;
     }
 
     .slogan-title h3 {
-        max-width: 70%;
-        font-size: 35px;
+        max-width: 100%;
+        font-size: 32px;
     }
 
     .brand-logo {
@@ -564,10 +564,6 @@ body {
 }
 
 @media (max-width: 375px) {
-    
-    .main-container-left {
-
-    }
 
     .main-container-right {
         background-size: cover;
